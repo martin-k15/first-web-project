@@ -1,0 +1,792 @@
+:root {
+    /*  pozadí */
+    --primary-color:
+        #4ECDC4;
+
+    /* nadpisy */
+    --headers: #0b0b15;
+
+    /* text */
+    --text: #555555;
+
+    /* rámečky formulářů */
+    --borders: #bbbbbb;
+
+    /* oddělovače (sekce Experience a patička stránky) */
+    --dividers: #eeeeee;
+
+    /* pozadí */
+    --background: #f7f7ff;
+
+    --border-radius: 0.3em;
+    --line-height: 1.5;
+    --card-color: white;
+}
+
+#buttonUp {
+    position: fixed;
+    background: none;
+    border: none;
+    right: 10px;
+    bottom: 30px;
+    cursor: pointer;
+    width: 4em;
+    height: 4em;
+    background-color: rgba(231, 109, 137,1); 
+    border-radius: 50%;
+    color: white;   
+    z-index: 10;
+    display:none;
+    animation: none;
+}
+
+#buttonUp:active{
+    background: rgba(196, 77, 86, 1);
+}
+
+.button__arrow{
+    font-size: 2em;
+}
+
+
+/* zarovnání */
+.block {
+    max-width: 1140px;
+    margin: 0em auto 0em auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    line-height: var(--line-height);
+}
+
+body,
+.text-area {
+    font-family: "Roboto", sans-serif;
+}
+
+.main-content,
+.experience,
+.portfolio,
+.footer,
+.bottom-content {
+    padding: 1em 2em 1em 2em;
+}
+
+/* NADPISY */
+.headers {
+    color: var(--headers);
+    z-index: 0;
+}
+
+/* TEXT */
+.what-i-do-flex__text,
+.portfolio-grid__text,
+.nav-ul,
+.nav-ul__item--href,
+.header__item--introduction-intro,
+.portfolio-grid__span,
+.contact-flex__form--input,
+.awards-flex__header,
+.body,
+p,
+.experience-flex__span--time,
+.footer__span--item {
+    color: var(--text);
+}
+
+/* ZMENŠENÉ PÍSMO */
+.experience-flex__span,
+.footer__span--item {
+    font-size: 0.9em;
+}
+
+/* POZADÍ */
+.main-content,
+.experience-flex__item,
+.bottom-content {
+    background-color: var(--background);
+}
+
+/* RÁMEČKY FORMULÁŘŮ */
+.contact-flex__form--input {
+    border: 2px solid var(--borders);
+}
+
+/* test: po kliknutí změna rámečku */
+.contact-flex__form--input:focus {
+    border: 2px solid var(--primary-color);
+    outline: 2px solid rgba(0, 0, 0, 0);
+}
+
+.experience-flex__span--time {
+    font-weight: 400;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.portfolio-grid__span {
+    font-weight: 400;
+    font-size: 0.7em;
+}
+
+/* ---------------------------------------------------------- */
+
+/* --------------------------------------------- */
+/* SEKCE HEADER */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 2em 0 2em;
+}
+
+.header__item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.header__hgroup {
+    margin: 0.3em 0 0 0;
+}
+
+.introduction__img {
+    width: 20em;
+    height: 20em;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.hgroup__item--primary {
+    font-size: 6em;
+    margin: 0;
+    font-weight: 900;
+    line-height: 1.3em;
+}
+
+.hgroup__item--secondary {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.header__begin {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.nav-ul__item {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.nav-ul__item--href {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.hgroup__item--secondary {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.nav-ul__item {
+    border-bottom: 3px solid white;
+    white-space: nowrap;
+}
+
+.nav-ul__item:hover {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.nav-ul {
+    padding: 0;
+    justify-content: space-between;
+    margin: 1em 0 2em 0;
+}
+
+.circle {
+    position: relative;
+}
+
+/* HLAVNÍ KOLEČKO u introduction__img */
+body::before {
+    content: "";
+    background-color: var(--primary-color);
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    right: -50vw;
+    top: -50vw;
+}
+
+/* Kolečka u nadpisů jednotlivých sekcí */
+.circle::before {
+    content: "";
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    width: 1.5em;
+    height: 1.5em;
+    left: -0.4em;
+    top: -0.2em;
+}
+
+/* --------------------------------------------- */
+/* SEKCE BIOGRAPHY */
+.biography {
+    padding: 2em 0;
+}
+
+.biography__subheader-name {
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.biography-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.biography-flex__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biography__header {
+    margin: 1em 0 0 0;
+    align-self: flex-start;
+}
+
+.biography__header-name {
+    margin-bottom: 0;
+    font-size: xx-large;
+}
+
+.biography__avatar {
+    border-radius: 50%;
+    width: 15em;
+    height: 15em;
+    background-color: var(--primary-color);
+}
+
+.main-content,
+.biography-flex {
+    margin-bottom: 2em;
+}
+
+.biography__wawe {
+    background-image: url(podklady/podklady_zapocet_projekt/border-dark.png);
+    background-repeat: repeat-x;
+    background-size: 20em;
+    opacity: 0.5;
+    height: 1em;
+}
+
+/* --------------------------------------------- */
+/* SEKCE WHAT I DO */
+
+.what-i-do {
+    margin-bottom: 3em;
+}
+
+.what-i-do-flex {
+    gap: 1em;
+}
+
+.what-i-do-flex__text {
+    margin-bottom: 0;
+}
+
+.what-i-do-flex__item {
+    padding: 1em;
+    background-color: var(--card-color);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.what-i-do-flex__text {
+    padding: 0 1em 1em 0;
+}
+
+.what-i-do-flex__item::before {
+    content: "";
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: -100px;
+    left: -60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.what-i-do-flex__header::before {
+    height: 7em;
+    width: 7em;
+    z-index: 10;
+    left: 2em;
+    display: block;
+    z-index: 1;
+}
+
+.what-i-do__header--pencil::before,
+.what-i-do__header--desktop::before,
+.what-i-do__header--bullseye::before {
+    margin-bottom: 3em;
+    position: relative;
+    /* nemuselo by být, ale pozice obrázku jsou pak mírně odlišné (je možné že to je návrhem .svg obrázků) */
+    /* trochu se tím upravují pozice obrázků níže */
+}
+
+.what-i-do__header--pencil::before {
+    content: url(podklady/podklady_zapocet_projekt/pencil-alt-solid.svg);
+    left: 0.6em;
+}
+
+.what-i-do__header--desktop::before {
+    content: url(podklady/podklady_zapocet_projekt/desktop-solid.svg);
+    left: 0.5em;
+    top: 0.6em;
+}
+
+.what-i-do__header--bullseye::before {
+    content: url(podklady/podklady_zapocet_projekt/bullseye-solid.svg);
+    left: 0.6em;
+}
+
+/* --------------------------------------------- */
+/* SEKCE AWARDS */
+
+.awards-flex {
+    gap: 1em;
+}
+
+.awards-flex__header {
+    margin: 0.5em 0;
+    font-weight: 400;
+    padding-top: 3em;
+}
+
+.trophy {
+    position: relative;
+}
+
+.trophy::before {
+    background-image: url(podklady/podklady_zapocet_projekt/trophy-solid.svg);
+    content: "";
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 2.2em;
+    height: 2em;
+    top: 1em;
+}
+
+.awards-flex__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5em;
+    border-radius: var(--border-radius);
+    background-color: var(--card-color);
+    flex: 1 1 auto;
+}
+
+/* --------------------------------------------- */
+/* SEKCE EXPRERIENCE */
+
+.experience-flex,
+.experience-flex__subitem {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-flex__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.experience-flex__subitem {
+    padding: 1em;
+    justify-content: center;
+    border-right: 2px solid var(--dividers);
+    align-items: flex-start;
+}
+
+.experience-flex__subitem--secondary {
+    border-right: none;
+}
+
+.experience-flex__item {
+    border-radius: var(--border-radius);
+    margin: 0.5em 0em;
+    padding: 1em 0 1em 0;
+}
+
+.experience-flex__span {
+    background-color: var(--primary-color);
+    color: var(--background);
+    border-radius: var(--border-radius);
+    width: 5em;
+    height: 1.3em;
+    padding: 0.2em;
+    text-align: center;
+}
+
+/* swap barev */
+.experience-flex__span--secondary {
+    background-color: var(--headers);
+    color: var(--background);
+}
+
+.experience-flex__header,
+.portfolio-grid__header,
+.what-i-do-flex__header {
+    margin: 0;
+}
+
+/* --------------------------------------------- */
+/* SEKCE PORTFOLIO */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1em;
+}
+
+.portfolio-grid__img {
+    width: 100%;
+}
+
+/* --------------------------------------------- */
+/* SEKCE CONTACT */
+
+.contact-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.contact-flex__item {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 1em;
+}
+
+.contact-flex__address--contact-me {
+    font-size: medium;
+    margin: 1em;
+    font-weight: 900;
+    margin-left: 2em;
+}
+
+.contact-flex__header {
+    margin-bottom: 0em;
+}
+
+.map-marker,
+.mail-marker,
+.mobile-marker {
+    position: relative;
+}
+
+.map-marker::before {
+    background-image: url(podklady/podklady_zapocet_projekt/map-marker-alt-solid.svg);
+    content: "";
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 1.2em;
+    height: 1.6em;
+    top: 1em;
+}
+
+.mail-marker::before {
+    background-image: url(podklady/podklady_zapocet_projekt/envelope-regular.svg);
+    content: "";
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 1.4em;
+    height: 1.5em;
+    top: 1em;
+}
+
+.mobile-marker::before {
+    background-image: url(podklady/podklady_zapocet_projekt/mobile-alt-solid.svg);
+    content: "";
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 0.9em;
+    height: 1.4em;
+    top: 1em;
+    left: 0.2em;
+}
+
+.contact-flex__button {
+    background-color: var(--headers);
+    font-weight: bold;
+    border: none;
+    margin: 1em 1em 1em 0;
+    padding: 0.8em;
+    border: 2px solid var(--headers);
+    border-radius: var(--border-radius);
+    color: var(--background);
+}
+
+.contact-flex__button:hover {
+    color: var(--headers);
+    background-color: var(--background);
+}
+
+.contact-flex__form--input {
+    padding: 1em;
+    height: 1.5em;
+}
+
+.contact-flex__form {
+    flex-grow: 1;
+}
+
+.contact-flex__form--item-1 {
+    display: grid;
+    gap: 1em;
+    margin: 1em auto;
+}
+
+.contact-flex__form--item-1 {
+    grid-template: 1fr / repeat(2, 2fr);
+}
+
+.contact-flex__form--item-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* loga */
+.img-marker {
+    width: 1.7em;
+}
+
+.text-area {
+    min-height: 5em;
+    max-height: 10em;
+    resize: vertical;
+}
+
+.contact-flex__address,
+.contact-flex__email,
+.contact-flex__phone {
+    display: flex;
+    gap: 0.5em;
+}
+
+.contact__map {
+    margin-bottom: 2em;
+    filter: grayscale(100%);
+    width: 100%;
+    border: 3px solid var(--card-color);
+}
+
+/* --------------------------------------------- */
+/* SEKCE FOOTER */
+.footer {
+    justify-content: space-between;
+}
+
+.footer-flex__item--primary,
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__img--item {
+    width: 2em;
+    height: 2em;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* -----------------------------   MEDIA QUERIES   ----------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+/* extra-large */
+@media screen and (min-width: 1200px) {
+
+    .what-i-do-flex,
+    .awards-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+/* large */
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+
+    .what-i-do-flex,
+    .awards-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+/* medium */
+@media screen and (min-width: 560px) and (max-width: 960px) {
+
+    .header__item--introduction-intro {
+        width: 60%;
+    }
+
+    .introduction__img,
+    body::before {
+        display: none;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-ul {
+        justify-content: flex-start;
+    }
+
+    .what-i-do-flex,
+    .biography-flex,
+    .contact-flex,
+    .what-i-do-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .awards-flex,
+    .nav-ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-flex__item {
+        align-self: flex-start;
+    }
+
+    .experience-flex__span--time {
+        white-space: normal;
+    }
+
+}
+
+/* small */
+@media screen and (min-width: 360px) and (max-width: 560px) {
+
+    .header {
+        grid-template-columns: 1fr;
+    }
+
+    .hgroup__item--primary {
+        font-size: 5em;
+    }
+
+    .hgroup__item--secondary {
+        font-size: 2em;
+    }
+
+    .header__hgroup {
+        font-size: small;
+    }
+
+    .introduction__img,
+    body::before {
+        display: none;
+    }
+
+    .nav-ul {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+
+    }
+
+    .nav-ul__item {
+        background-color: var(--primary-color);
+        align-items: center;
+        border: none;
+        margin-right: 0;
+        text-align: center;
+        border-radius: var(--border-radius);
+    }
+
+    .nav-ul__item--href {
+        color: var(--headers);
+        display: block;
+        padding: 0.8em 0em;
+    }
+
+    .what-i-do-flex,
+    .biography-flex,
+    .awards-flex,
+    .footer,
+    .contact-flex,
+    .experience-flex__item,
+    .contact-flex__form--item-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .awards-flex__item {
+        flex-direction: row;
+        padding: 1em;
+        justify-content: left;
+    }
+
+    .awards-flex__header {
+        padding-top: 0;
+        padding-left: 3em;
+        margin-left: 1em;
+    }
+
+    .experience-flex__item {
+        padding: 1em 0em 0em 0em;
+    }
+
+    .experience-flex__subitem,
+    .nav-ul__item:hover {
+        border: none;
+    }
+
+    .contact-flex__form--item-1 {
+        grid-template: repeat(2, 2fr) / 1fr;
+    }
+
+    .footer-flex__item--primary,
+    .footer-flex__item--secondary {
+        display: flex;
+        justify-content: center;
+    }
+
+}

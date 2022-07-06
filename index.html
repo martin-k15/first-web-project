@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <link rel="stylesheet" href="style-projekt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="author" content="Martin Kostka">
+    <meta name="keywords" content="Jane Doe full-stack developer designer artist">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="I design and develop services for customers of all sizes, specializing in
+    creating stylish, modern websites, web services and online stores.">
+    <title>Jane Doe</title>
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <button id="buttonUp"><span class="button__arrow">&#8593;</span></button>
+    <header class="header block">
+        <div class="header__item">
+            <span class="header__begin headers">Hello, My name is</span>
+            <hgroup class="header__hgroup headers">
+                <h1 class="hgroup__item--primary">Jane Doe</h1>
+                <h2 class="hgroup__item--secondary">Full-Stack Developer</h2>
+            </hgroup>
+            <p class="header__item--introduction-intro">
+                I design and develop services for customers of all sizes, specializing in
+                creating stylish, modern websites, web services and online stores.
+            </p>
+
+            <nav>
+                <ul class="nav-ul flex">
+                    <li class="nav-ul__item"><a class="nav-ul__item--href" href="#biography">biography</a></li>
+                    <li class="nav-ul__item"><a class="nav-ul__item--href" href="#what-i-do">what i do?</a></li>
+                    <li class="nav-ul__item"><a class="nav-ul__item--href" href="#awards">awards</a></li>
+                    <li class="nav-ul__item"><a class="nav-ul__item--href" href="#experience">experience</a></li>
+                    <li class="nav-ul__item"><a class="nav-ul__item--href" href="#portfolio">my portfolio</a></li>
+                    <li class="nav-ul__item"><a class="nav-ul__item--href" href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <img class="introduction__img" alt="avatar-main" src="podklady/podklady_zapocet_projekt/avatar3-me.svg">
+    </header>
+
+
+    <div class="main-content">
+        <section class="biography block" id="biography">
+            <div class="biography-flex">
+                <div class="biography-flex__item">
+                    <img class="biography__avatar" alt="avatar" src="podklady/podklady_zapocet_projekt/avatar3-me.svg">
+                    <h2 class="biography__header-name headers">Jane Doe</h2>
+                    <span class="biography__subheader-name">Full-Stack Developer</span>
+                </div>
+
+
+                <div class="biography-flex__item">
+                    <h2 class="biography__header circle headers">Biography</h2>
+                    <p class="biography__p">
+                        I'm a Freelancer Front-end Developer with over 3 years of experience.
+                        I code and create web elements for amazing people around the world. I like
+                        work with new people. New people new Experiences. <br><br>
+
+
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Nulla non lectus sed nisl molestie malesuada. Pellentesque
+                        sapien. Etiam neque. Lorem ipsum dolor sit amet, consectetuer <br><br>
+
+                        Duis ante orci, molestie vitae vehicula venenatis,
+                        tincidunt ac pede. Aliquam erat volutpat. Aliquam erat volutpat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="biography__wawe block"></div>
+        </section>
+
+        <section class="what-i-do block" id="what-i-do">
+            <h2 class="what-i-do__header circle headers">What I Do?</h2>
+
+            <div class="what-i-do-flex flex">
+                <article class="what-i-do-flex__item">
+                    <h4 class="what-i-do-flex__header what-i-do__header--pencil headers">Web Design</h4>
+                    <p class="what-i-do-flex__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Nulla non lectus sed nisl molestie malesuada. Pellentesque
+                        sapien. Etiam neque.
+                    </p>
+                </article>
+
+                <article class="what-i-do-flex__item">
+                    <h4 class="what-i-do-flex__header what-i-do__header--desktop headers">Web Development</h4>
+                    <p class="what-i-do-flex__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Nulla non lectus sed nisl molestie malesuada. Pellentesque
+                        sapien. Etiam neque.
+                    </p>
+                </article>
+
+                <article class="what-i-do-flex__item">
+                    <h4 class="what-i-do-flex__header what-i-do__header--bullseye headers">Seo Marketing</h4>
+                    <p class="what-i-do-flex__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Nulla non lectus sed nisl molestie malesuada. Pellentesque
+                        sapien. Etiam neque.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="awards block" id="awards">
+            <h2 class="awards__header circle headers">Awards</h2>
+
+            <div class="awards-flex">
+                <article class="awards-flex__item trophy">
+                    <h5 class="awards-flex__header">Creative Designer</h5>
+                </article>
+
+                <article class="awards-flex__item trophy">
+
+                    <h5 class="awards-flex__header">Yearly Best Performer</h5>
+                </article>
+
+                <article class="awards-flex__item trophy">
+
+                    <h5 class="awards-flex__header">Best Learner Award</h5>
+                </article>
+
+            </div>
+        </section>
+    </div>
+
+
+    <section class="experience block" id="experience">
+        <h2 class="circle headers">Experience</h2>
+        <div class="experience-flex">
+            <article class="experience-flex__item">
+                <div class="experience-flex__subitem">
+                    <time datetime="2021-02" class="experience-flex__span--time">Feb 2021 - Present</time>
+                    <span class="experience-flex__span">Full Time</span>
+                </div>
+                <div class="experience-flex__subitem experience-flex__subitem--secondary">
+                    <h4 class="experience-flex__header headers">Google LLC - Sr. Front-end Engineer</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Nulla non lectus sed nisl molestie malesuada. Pellentesque
+                        sapien. Etiam neque.
+                    </p>
+                </div>
+            </article>
+
+
+
+            <article class="experience-flex__item">
+                <div class="experience-flex__subitem">
+                    <time datetime="2020-03" class="experience-flex__span--time">Mar 2020 - Present</time>
+                    <span class="experience-flex__span experience-flex__span--secondary">Part Time</span>
+                </div>
+                <div class="experience-flex__subitem experience-flex__subitem--secondary">
+                    <h4 class="experience-flex__header headers">Ridian IT - Visual Designer</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Nulla non lectus sed nisl molestie malesuada. Pellentesque
+                        sapien. Etiam neque.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="experience-flex__item">
+                <div class="experience-flex__subitem">
+                    <time datetime="2019-01" class="experience-flex__span--time">Jan 2019 - Present</time>
+                    <span class="experience-flex__span">Full Time</span>
+                </div>
+                <div class="experience-flex__subitem experience-flex__subitem--secondary">
+                    <h4 class="experience-flex__header headers">IB Themes - Animation Artist</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Nulla non lectus sed nisl molestie malesuada. Pellentesque
+                        sapien. Etiam neque.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="portfolio block" id="portfolio">
+        <h2 class="circle headers">My Portfolio</h2>
+
+        <div class="portfolio-grid">
+            <article>
+                <img class="portfolio-grid__img" src="https://dummyimage.com/640x360/f7f7ff/555" alt="#">
+                <h4 class="portfolio-grid__header headers">Lorem ipsum</h4>
+                <span class="portfolio-grid__span">07/13/2305</span>
+                <p class="portfolio-grid__text">Et enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aure irure dolor.
+                </p>
+            </article>
+
+            <article>
+                <img class="portfolio-grid__img" src="https://dummyimage.com/640x360/f7f7ff/555" alt="#">
+                <h4 class="portfolio-grid__header headers">Lorem ipsum</h4>
+                <span class="portfolio-grid__span">07/13/2305</span>
+                <p class="portfolio-grid__text">Et enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aure irure dolor.
+                </p>
+            </article>
+
+            <article>
+                <img class="portfolio-grid__img" src="https://dummyimage.com/640x360/f7f7ff/555" alt="#">
+                <h4 class="portfolio-grid__header headers">Lorem ipsum</h4>
+                <span class="portfolio-grid__span">07/13/2305</span>
+                <p class="portfolio-grid__text">Et enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aure irure dolor.
+                </p>
+            </article>
+
+            <article class="portfolio-grid__item">
+                <img class="portfolio-grid__img" src="https://dummyimage.com/640x360/f7f7ff/555" alt="#">
+                <h4 class="portfolio-grid__header headers">Lorem ipsum</h4>
+                <span class="portfolio-grid__span">07/13/2305</span>
+                <p class="portfolio-grid__text">Et enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aure irure dolor.
+                </p>
+            </article>
+
+            <article class="portfolio-grid__item">
+                <img class="portfolio-grid__img" src="https://dummyimage.com/640x360/f7f7ff/555" alt="#">
+                <h4 class="portfolio-grid__header headers">Lorem ipsum</h4>
+                <span class="portfolio-grid__span">07/13/2305</span>
+                <p class="portfolio-grid__text">Et enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aure irure dolor.
+                </p>
+            </article>
+
+            <article class="portfolio-grid__item">
+                <img class="portfolio-grid__img" src="https://dummyimage.com/640x360/f7f7ff/555" alt="#">
+                <h4 class="portfolio-grid__header headers">Lorem ipsum</h4>
+                <span class="portfolio-grid__span">07/13/2305</span>
+                <p class="portfolio-grid__text">Et enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aure irure dolor.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <div class="bottom-content" id="contact">
+        <section class="contact block">
+            <h2 class="contact__header circle headers">Contact</h2>
+
+            <div class="contact-flex">
+                <article class="contact-flex__item">
+                    <h4 class="contact-flex__header headers"> What's your story? Get in touch</h4>
+                    <p> Always available for freelancing if the right project comes
+                        along, Feel free
+                        to contanct me.
+                    </p>
+
+                    <div class="contact-flex__address map-marker">
+                        <span class="contact-flex__address--contact-me headers">Champ de Mars, 5 Av. Anatole France,
+                            75007 Paris, France</span>
+                    </div>
+                    <div class="contact-flex__email mail-marker">
+                        <span class="contact-flex__address--contact-me headers">support@domain.com</span>
+                    </div>
+                    <div class="contact-flex__phone mobile-marker">
+                        <span class="contact-flex__address--contact-me headers">555-2368</span>
+                    </div>
+                </article>
+
+                <article class="contact-flex__form">
+                    <h4 class="headers"><label>Say Something</label></h4>
+                    <form class="contact-flex__form">
+                        <div class="contact-flex__form--item-1">
+                            <input type="text" class="contact-flex__form--input" placeholder="Full name">
+                            <input type="email" class="contact-flex__form--input" placeholder="Email address">
+                        </div>
+                        <div class="contact-flex__form--item-2">
+                            <input type="text" class="contact-flex__form--input" placeholder="Subject">
+                            <textarea id="head" class="contact-flex__form--input text-area"
+                                placeholder="Type comment"></textarea>
+                        </div>
+                        <button type="submit" class="contact-flex__button">Send Message</button>
+                    </form>
+                </article>
+            </div>
+
+
+            <iframe class="contact__map" height="350"
+                src="https://maps.google.com/maps?width=10025&amp;height=600&amp;hl=en&amp;q=Champ%20de%20Mars,%205%20Av.%20Anatole%20France,%2075007%20Paris,%20Francie+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
+        </section>
+    </div>
+
+
+    <footer class="footer block">
+        <div class="footer-flex__item--primary">
+            <a href="#"><img class="footer__img--item" src="podklady/podklady_zapocet_projekt/twitter-square-brands.svg"
+                    alt="twitter-logo"></a>
+            <a href="#"><img class="footer__img--item"
+                    src="podklady/podklady_zapocet_projekt/facebook-square-brands.svg" alt="facebook-logo"></a>
+        </div>
+
+        <div class="footer-flex__item--secondary">
+            <span class="footer__span--item">&#169; Lorem ipsum dolor sit amet 2022</span>
+        </div>
+    </footer>
+
+    <script>
+        var scrollButton = document.querySelector("#buttonUp");
+        var isHide = 1;
+
+        function test() {
+            if (window.pageYOffset < 215) {
+                scrollButton.style.display = "none";
+                isHide = 1;
+            } else {
+                scrollButton.style.display = "block";
+                showAnimation();
+            }
+        }
+
+        if (scrollButton) {
+            console.log("scrollButton is active");
+            scrollButton.addEventListener("click", event => {
+                console.log("go up");
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+            });
+        }
+
+        window.onscroll = function () {
+            console.log(window.pageYOffset);
+            test();
+        }
+
+        function showAnimation() {
+            if (isHide) {
+                scrollButton.animate([
+                    { height: '0.1em' },
+                    { height: '4em' }
+                ], {
+                    duration: 300
+                });
+                isHide = 0;
+            }
+        }
+
+    </script>
+</body>
+
+
+</html>
