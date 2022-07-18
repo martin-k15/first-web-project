@@ -1,2 +1,2 @@
 # My first web project
-This is one of my first webpage created during my university studies. 
+This project represents static webpage that can be used as template for cv.
